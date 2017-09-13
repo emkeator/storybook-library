@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#Nav {
+  width: 100vw;
+  height: 50px;
+  background-color: #D7CEC7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center; }
+  #Nav #logo {
+    height: 50px;
+    position: absolute;
+    left: 10px; }
+  #Nav span,
+  #Nav a {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #565656;
+    font-family: "Playfair Display", serif;
+    font-size: 20px; }
+  #Nav .logInOut {
+    background-color: rgba(118, 50, 63, 0.5); }
+    #Nav .logInOut:hover {
+      background-color: #494E6B;
+      color: #D7CEC7; }
+
+#BookPage {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; }
+
+#BookViewer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: scale(4.8);
+  display: flex;
+  flex-wrap: wrap; }
+  #BookViewer img {
+    width: 90vw;
+    height: 70vh; }
+  #BookViewer div {
+    background-color: #353535; }
+  #BookViewer .top {
+    width: 100vw;
+    height: 5vh; }
+  #BookViewer .left {
+    width: 0vw;
+    height: 0vh; }
+  #BookViewer .right {
+    width: 10vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    #BookViewer .right img {
+      width: 70px;
+      height: 230px;
+      display: none; }
+    #BookViewer .right a {
+      width: 60px;
+      height: 230px;
+      display: none;
+      position: absolute;
+      left: calc((25vw / 2) - 32px);
+      top: calc((70vh / 2) - 40px);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 20px; }
+  #BookViewer .bottom {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    #BookViewer .bottom img {
+      width: 70px;
+      height: 230px;
+      transform: rotate(90deg);
+      display: block; }
+    #BookViewer .bottom a {
+      width: 60px;
+      height: 230px;
+      display: block;
+      position: absolute;
+      left: calc((100vw / 2) - 32px);
+      top: calc((25vh / 2) - 30px);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 20px; }
+
+@media (min-width: 700px) {
+  #BookViewer img {
+    width: 70vw;
+    height: 70vh; }
+  #BookViewer .left {
+    width: 5vw;
+    height: 70vh; }
+  #BookViewer .right {
+    width: 25vw;
+    height: 70vh; }
+    #BookViewer .right img {
+      display: block; }
+    #BookViewer .right a {
+      display: block; }
+  #BookViewer .bottom img {
+    display: none; }
+  #BookViewer .bottom a {
+    display: none; } }
+
+.Illustrations {
+  width: 100vw; }
+
+#Book1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  #Book1 .layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    /* ... and so is adding some extra space for scrolling ... */
+    padding-top: 10vh;
+    padding-bottom: 100vh; }
+
+#Shelf {
+  width: 100vw;
+  min-height: calc(100vw - 50px);
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  #Shelf ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px; }
+    #Shelf ul li {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+    #Shelf ul .book {
+      width: 250px;
+      height: 250px;
+      position: relative;
+      margin: 30px 20px; }
+    #Shelf ul .bookOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+      text-shadow: -1px -1px 0 #C09F80, 1px -1px 0 #C09F80, -1px 1px 0 #C09F80, 1px 1px 0 #C09F80;
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      color: #000; }
+      #Shelf ul .bookOverlay:hover {
+        background-color: rgba(166, 128, 131, 0.6);
+        transform: scale(1.1); }
+
+@media (min-width: 600px) {
+  #Shelf ul {
+    justify-content: flex-start; }
+    #Shelf ul li {
+      width: 50%; } }
+
+@media (min-width: 830px) {
+  #Shelf ul li {
+    width: 33.3%; } }
+
+@media (min-width: 1120px) {
+  #Shelf ul li {
+    width: 25%; } }
+
+@media (min-width: 1420px) {
+  #Shelf ul li {
+    width: 20%; } }
+
+#Shelf .book {
+  background-image: url("./images/book_cover.jpg");
+  background-size: cover;
+  background-origin: center;
+  background-repeat: none; }

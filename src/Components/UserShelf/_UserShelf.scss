@@ -1,0 +1,123 @@
+@import './../../../sass/variables';
+@import './../../../sass/mixins';
+
+#Shelf {
+    width: 100vw;
+    min-height: calc(100vw - 50px);
+    background-color: $slate;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        // border: 1px solid red;
+
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            // border: 1px solid blue;
+        }
+        .book {
+            width: 250px;
+            height: 250px;
+
+            position: relative;
+
+            margin: 30px 20px;
+        }
+
+        .bookOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+
+            text: {
+                align: center;
+                shadow:
+                    -1px -1px 0 $tan,  
+                    1px -1px 0 $tan,
+                    -1px 1px 0 $tan,
+                    1px 1px 0 $tan;
+            }
+
+            font: {
+                family: $serif;
+                size: 30px;
+            }
+
+            color: $black;
+
+            &:hover {
+                background-color: $pale-oxblood-opaque;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    
+}
+
+@media (min-width: 600px) {
+    #Shelf {
+        ul {
+            // padding: 30px 20px;
+            justify-content: flex-start;
+            li {
+                width: 50%;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 830px) {
+    #Shelf {
+        ul {
+            // padding: 50px 50px;
+
+            li {
+                width: 33.3%;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 1120px) {
+    #Shelf {
+        ul {
+            // padding: 50px 50px;
+
+            li {
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1420px) {
+    #Shelf {
+        ul {
+            // padding: 50px 50px;
+
+            li {
+                width: 20%;
+            }
+        }
+    }
+}

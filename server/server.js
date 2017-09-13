@@ -48,7 +48,7 @@ app.get('/auth', passport.authenticate('auth0'));
 
 //will get us back once we're authenticated or not
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/',
+    successRedirect: 'http://localhost:3000/#/shelf',
     failureRedirect: 'http://localhost:3000/'
 }))
 

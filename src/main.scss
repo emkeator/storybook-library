@@ -1,0 +1,25 @@
+@import './sass/reset';
+
+// ======= Variables ======= //
+@import './sass/variables';
+
+// ======= Mixins ======= //
+@import './sass/mixins';
+
+// ======= Components ======= //
+@import './Components/Nav/Nav';
+@import './Components/Book/Book';
+@import './Components/Illustrations/Illustrations';
+@import './Components/Landing/Landing';
+@import './Components/UserShelf/UserShelf';
+
+
+
+#Shelf {
+    .book {
+        background-image: url('./images/book_cover.jpg');
+        background-size: cover;
+        background-origin: center;
+        background-repeat: none;
+    }
+}

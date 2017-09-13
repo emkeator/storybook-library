@@ -1,0 +1,47 @@
+@import './../../../sass/variables';
+@import './../../../sass/mixins';
+
+#Nav {
+    width: 100vw;
+    height: 50px;
+    background-color: $grain;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    // position: fixed;
+
+    #logo {
+        height: 50px;
+        position: absolute;
+        left: 10px;
+    }
+    span,
+    a {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text: {
+            align: center;
+            decoration: none;
+            transform: uppercase;
+        }
+        color: $blackboard;
+        font: {
+            family: $serif;
+            size: 20px;
+        }
+        // border: 1px solid red;
+    }
+
+    .logInOut {
+        background-color: $oxblood-opaque;
+        &:hover {
+            background-color: $stormy;
+            color: $grain;
+        }        
+    }
+}

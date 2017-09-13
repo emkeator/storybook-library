@@ -1,0 +1,29 @@
+.Illustrations {
+    width: 100vw;
+}
+#Book1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .layer {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        /* ... and so is adding some extra space for scrolling ... */
+        padding-top: 10vh;
+        padding-bottom: 100vh;
+    }
+
+}
