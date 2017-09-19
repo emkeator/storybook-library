@@ -7,8 +7,9 @@ const express = require('express'),
       passport = require('passport'),
       Auth0Strategy = require('passport-auth0'),
       app = express(),
-      port = 3001;
+      port = 3005;
 
+      
 app.use(bodyParser.json());
 app.use(cors());
 app.use(session({
@@ -41,7 +42,7 @@ passport.deserializeUser((obj, done) => {
     done(null, obj);
 });
 
-// app.get('/auth/me');
+//app.get('/auth/me');
 
 //kicks off process and redirects to auth 0
 app.get('/auth', passport.authenticate('auth0'));
@@ -58,5 +59,4 @@ app.get('/auth/logout', (req, res) => {
 })
 
 
-
-app.listen(port, () => `I'm listening on port ` + port);
+app.listen(port, () => console.log(`I'm listening on port ${port}`));

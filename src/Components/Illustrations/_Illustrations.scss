@@ -1,6 +1,77 @@
 .Illustrations {
-    width: 100vw;
+    width: 1300px;
+    height: 700px;
+    background-image: url('https://static1.squarespace.com/static/586ae5e4725e250e1db6a07a/t/586b0f95ff7c50bb14e6422e/1483411382624/Blue+Skies.png?format=1500w');
+    background-size: cover;
+
+    button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: $oxblood;
+        color: $grain;
+        border: none;
+        border-radius: 30%;
+        width: 30px;
+        height: 30px;
+        font: {
+            size: 30px;
+            family: $serif;
+        }
+        padding: 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: $brown;
+        }
+    }
+
+    #forward {
+        bottom: 55px;
+    }
+
+    #backward {
+        transform: scaleY(-1);
+    }
+
+    #BookViewer {
+        width: 1300px;
+        height: 700px;
+        div {
+            background-color: $grain;
+            position: fixed;
+        }
+    }
+
+    .top {
+        width: 100vw;
+        height: 20px;
+        top: 0px;
+        left: 0px;
+    }
+    .left {
+        width: 125px;
+        height: calc(1300px - 40px);
+        top: 20px;
+        left: 0px;
+    }
+    .right {
+        width: calc(100vw - 125px - 1050px);
+        height: calc(1300px - 40px);
+        top: 20px;
+        left: calc(125px + 1050px);
+    }
+    .bottom {
+        width: 100vw;
+        height: calc(100vw - 20px - 640px);
+        top: calc(20px + 660px);
+        left: 0px;
+    }
 }
+
 #Book1 {
     position: absolute;
     top: 0px;
@@ -16,6 +87,7 @@
         position: absolute;
         width: 100vw;
         height: 100vh;
+        border: 1px solid red;
         top: 0;
         left: 0;
         right: 0;
@@ -25,5 +97,153 @@
         padding-top: 10vh;
         padding-bottom: 100vh;
     }
+
+}
+
+#Book4 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    perspective: 1px;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    p {
+        width: 300px;
+        padding: 10px 30px;
+        min-height: 80px;
+        // background-color: $white-opaque;
+        color: $slate;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: {
+            family: $serif;
+            size: 25px;
+        }
+        border-radius: 20px;
+        line-height: 1.2em;
+
+        position: absolute;
+    }
+
+    .layer {
+        position: absolute;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        width: 1050px;
+        height: 700px;
+        bottom: 0px;
+        left: 125px;
+        right: 0;
+        padding: 0;
+    }
+
+    .background {
+        opacity: 0;
+        bottom: 0px;
+    }
+    .page1 {
+        transform: scale(1);
+
+        p {
+            top: 100px;
+            left: 200px;
+        }
+    }
+
+    .page1second {
+        transform: scaleX(-1) scaleY(1);
+        height: 710px;
+        bottom: 20px;        
+    }
+
+    .page2 {
+        transform: scale(1);
+        opacity: 0;
+        bottom: -1400px;
+        p {
+            top: 500px;
+            left: 600px;
+        }
+    }
+
+    .page2second {
+        transform: scaleX(-1) scaleY(1);
+        opacity: 0;
+        height: 710px;
+        bottom: -1400px;        
+    }
+
+    .page3 {
+        transform: scale(1);
+        opacity: 0;
+        bottom: -1400px;
+        p {
+            top: 40px;
+            left: 30px;
+        }
+    }
+
+    .page3second {
+        transform: scaleX(-1) scaleY(1);
+        opacity: 0;
+        height: 710px;
+        bottom: -1400px;        
+    }
+
+    .page4 {
+        transform: scale(1);
+        opacity: 0;
+        bottom: -1400px;
+        p {
+            top: 40px;
+            left: 30px;
+        }
+    }
+
+    .page4second {
+        transform: scaleX(-1) scaleY(1);
+        opacity: 0; 
+        height: 710px;
+        bottom: -1400px;       
+    }
+
+    .page5 {
+        p {
+            color: $white;
+            top: 100px;
+            left: 200px;
+        }
+    }
+
+    .page6 {
+        p {
+            // color: $white;
+            top: 120px;
+            left: 120px;
+        }
+    }
+
+    .page5,
+    .page6 {
+        transform: scale(1);
+        opacity: 0;
+        bottom: -1400px;
+    }
+
+    .page5second,
+    .page6second {
+        transform: scaleX(-1) scaleY(1);
+        opacity: 0;
+        height: 710px;
+        bottom: -1400px;      
+    }
+
+    
 
 }

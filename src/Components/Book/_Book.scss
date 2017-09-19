@@ -4,144 +4,39 @@
 #BookPage {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 700px;
     overflow: hidden;
+    background-color: $grain;
 }
 
-#BookViewer {
-    width: 100vw;
-    height: 100vh;
-
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    // z-index: 3;
-    transform: scale(4.8);
-
-    display: flex;
-    flex-wrap: wrap;
+#Bookmark {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
 
     img {
-        width: 90vw;
-        height: 70vh;
+        width: 80px;
+        height: 150px;
     }
 
-    div {
-        background-color: $slate;
-    }
-
-    .top {
-        width: 100vw;
-        height: 5vh;
-    }
-    .left {
-        width: 0vw;
-        height: 0vh;
-    }
-    .right {
-        width: 10vw;
-        height: 70vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        img {
-            width: 70px;
-            height: 230px;
-            display: none;
+    a {
+        width: 50px;
+        height: 150px;
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        padding-top: calc(75px - 50px);
+        // border: 1px solid red;
+        color: $white;
+        line-height: 1.2em;
+        text: {
+            decoration: none;
+            align: center;
         }
-
-        a {
-            width: 60px;
-            height: 230px;
-            display: none;
-            position: absolute;
-            left: calc((25vw / 2) - 32px);
-            top: calc((70vh / 2) - 40px);
-            color: $white;
-            text: {
-                decoration: none;
-                align: center;
-            }
-            font: {
-                family: $serif;
-                size: 20px;
-            }
-        }
-
-    }
-    .bottom {
-        width: 100vw;
-        height: 25vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        img {
-            width: 70px;
-            height: 230px;
-            transform: rotate(90deg);
-            display: block;
-        }
-
-        a {
-            width: 60px;
-            height: 230px;
-            display: block;
-            position: absolute;
-            left: calc((100vw / 2) - 32px);
-            top: calc((25vh / 2) - 30px);
-            color: $white;
-            text: {
-                decoration: none;
-                align: center;
-            }
-            font: {
-                family: $serif;
-                size: 20px;
-            }
-        }
-    }
-}
-
-@media (min-width: 700px) {
-    #BookViewer {
-
-        img {
-            width: 70vw;
-            height: 70vh;
-        }
-
-        .left {
-            width: 5vw;
-            height: 70vh;
-        }
-
-        .right {
-            width: 25vw;
-            height: 70vh;
-
-            img {
-                display: block;
-            }
-
-            a {
-                display: block;
-            }
-
-        }
-        .bottom {
-            img {
-                display: none;
-            }
-
-            a {
-                display: none;
-            }
+        font: {
+            family: $serif;
+            size: 18px;
         }
     }
 }

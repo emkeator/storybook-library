@@ -1,0 +1,54 @@
+@import './../../../sass/variables';
+@import './../../../sass/mixins';
+
+#Landing {
+    background-color: $oxblood;
+    width: 100vw;
+    height: calc(100vh - 50px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        width: 100vw;
+        height: 100px;
+        margin: 0;
+        font: {
+            family: $serif;
+            size: 4rem;
+        }
+        text: {
+            align: center;
+            shadow:
+                -1px -1px 0 $tan,  
+                1px -1px 0 $tan,
+                -1px 1px 0 $tan,
+                1px 1px 0 $tan;
+            
+        }
+
+    }
+
+    h2 {
+        width: 100vw;
+        height: 50px;
+        margin: 0;
+        font: {
+            family: $serif;
+            size: 2rem;
+        }
+        text: {
+            align: center;
+            // shadow:
+            //     -1px -1px 0 $tan,  
+            //     1px -1px 0 $tan,
+            //     -1px 1px 0 $tan,
+            //     1px 1px 0 $tan;
+            
+        }
+
+    }
+
+}

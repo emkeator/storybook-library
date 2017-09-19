@@ -2,7 +2,8 @@
   "name": "practice",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:3005",
+  "homepage": "http://localhost:3000",
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
@@ -10,6 +11,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
+    "gsap": "^1.20.2",
     "jquery": "^3.2.1",
     "massive": "^3.2.2",
     "node-sass-chokidar": "0.0.3",

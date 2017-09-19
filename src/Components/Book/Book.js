@@ -4,6 +4,7 @@ import bookViewer from './../../images/bookBG.png';
 import bookmark from './../../images/bookmark.svg';
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
+import TweenMax from 'gsap';
 
 export default class Book extends Component {
 
@@ -25,7 +26,8 @@ export default class Book extends Component {
     }
 
     enterBook() {
-        $('#BookPage').scrollTop(200);
+        TweenMax.to($('#BookViewer'), 2, {scale: '5', ease: TweenMax.Power1.easeIn});
+        TweenMax.to($('#BookViewer'), 0, {display: 'none', delay: 2, ease: TweenMax.Power1.easeIn});        
     }
 
     linkScrollToScale() {
@@ -40,14 +42,8 @@ export default class Book extends Component {
         
         return(
             <main id="BookPage" onScroll={() => this.linkScrollToScale()}>
-                <Illustrations id={this.props.match.params.id}/>
-                <div id="BookViewer">
-                    <div className="top"></div>
-                    <div className="left"></div>                    
-                    <img src={bookViewer} alt="open book"/>
-                    <div className="right"><img src={bookmark} alt="bookmark"/><Link to='/shelf'>Return to Shelf</Link></div>
-                    <div className="bottom"><img src={bookmark} alt="bookmark"/><Link to='/shelf'>Return to Shelf</Link></div>                    
-                </div>
+                <Illustrations id={this.props.match.params.id}/> 
+                <div id="Bookmark"><img src={bookmark} alt="bookmark"/><Link to='/shelf'>To Shelf</Link></div>
             </main>
             
         );
