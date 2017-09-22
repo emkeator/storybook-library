@@ -106,7 +106,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    perspective: 1px;
+    // perspective: 1px;
     height: 700px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -135,10 +135,10 @@
         position: absolute;
         overflow-y: hidden;
         overflow-x: scroll;
-        width: 1050px;
+        width: 3150px;
         height: 700px;
         bottom: 0px;
-        left: 125px;
+        left: -825px;
         right: 0;
         padding: 0;
     }
@@ -149,6 +149,8 @@
     }
     .page1 {
         transform: scale(1);
+        perspective: 1px;
+        // opacity: 0;
 
         p {
             top: 100px;
@@ -163,9 +165,9 @@
     }
 
     .page2 {
-        transform: scale(1);
-        opacity: 0;
-        bottom: -1400px;
+        transform: scale(0.55);
+        // opacity: 0;
+        bottom: -125px;
         p {
             top: 500px;
             left: 600px;
@@ -173,44 +175,43 @@
     }
 
     .page2second {
-        transform: scaleX(-1) scaleY(1);
-        opacity: 0;
+        transform: scaleX(-0.55) scaleY(0.55);
+        // opacity: 0;
         height: 710px;
-        bottom: -1400px;        
+        bottom: -125px;        
+    }
+
+    .page3,
+    .page4,
+    .page5,
+    .page6 {
+        transform: scale(0.5);
+        // opacity: 0;
+        bottom: -142px;
+    }
+
+    .page3second,
+    .page4second,
+    .page5second,
+    .page6second {
+        transform: scaleX(-0.5) scaleY(0.5);
+        // opacity: 0;
+        height: 710px;
+        bottom: -142px;      
     }
 
     .page3 {
-        transform: scale(1);
-        opacity: 0;
-        bottom: -1400px;
         p {
             top: 40px;
             left: 30px;
         }
-    }
-
-    .page3second {
-        transform: scaleX(-1) scaleY(1);
-        opacity: 0;
-        height: 710px;
-        bottom: -1400px;        
     }
 
     .page4 {
-        transform: scale(1);
-        opacity: 0;
-        bottom: -1400px;
         p {
             top: 40px;
             left: 30px;
         }
-    }
-
-    .page4second {
-        transform: scaleX(-1) scaleY(1);
-        opacity: 0; 
-        height: 710px;
-        bottom: -1400px;       
     }
 
     .page5 {
@@ -229,20 +230,7 @@
         }
     }
 
-    .page5,
-    .page6 {
-        transform: scale(1);
-        opacity: 0;
-        bottom: -1400px;
-    }
-
-    .page5second,
-    .page6second {
-        transform: scaleX(-1) scaleY(1);
-        opacity: 0;
-        height: 710px;
-        bottom: -1400px;      
-    }
+    
 
     
 

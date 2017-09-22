@@ -199,7 +199,6 @@ table {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  perspective: 1px;
   height: 700px;
   overflow-x: hidden;
   overflow-y: hidden; }
@@ -221,17 +220,18 @@ table {
     position: absolute;
     overflow-y: hidden;
     overflow-x: scroll;
-    width: 1050px;
+    width: 3150px;
     height: 700px;
     bottom: 0px;
-    left: 125px;
+    left: -825px;
     right: 0;
     padding: 0; }
   #Book4 .background {
     opacity: 0;
     bottom: 0px; }
   #Book4 .page1 {
-    transform: scale(1); }
+    transform: scale(1);
+    perspective: 1px; }
     #Book4 .page1 p {
       top: 100px;
       left: 200px; }
@@ -240,41 +240,34 @@ table {
     height: 710px;
     bottom: 20px; }
   #Book4 .page2 {
-    transform: scale(1);
-    opacity: 0;
-    bottom: -1400px; }
+    transform: scale(0.55);
+    bottom: -125px; }
     #Book4 .page2 p {
       top: 500px;
       left: 600px; }
   #Book4 .page2second {
-    transform: scaleX(-1) scaleY(1);
-    opacity: 0;
+    transform: scaleX(-0.55) scaleY(0.55);
     height: 710px;
-    bottom: -1400px; }
-  #Book4 .page3 {
-    transform: scale(1);
-    opacity: 0;
-    bottom: -1400px; }
-    #Book4 .page3 p {
-      top: 40px;
-      left: 30px; }
-  #Book4 .page3second {
-    transform: scaleX(-1) scaleY(1);
-    opacity: 0;
+    bottom: -125px; }
+  #Book4 .page3,
+  #Book4 .page4,
+  #Book4 .page5,
+  #Book4 .page6 {
+    transform: scale(0.5);
+    bottom: -142px; }
+  #Book4 .page3second,
+  #Book4 .page4second,
+  #Book4 .page5second,
+  #Book4 .page6second {
+    transform: scaleX(-0.5) scaleY(0.5);
     height: 710px;
-    bottom: -1400px; }
-  #Book4 .page4 {
-    transform: scale(1);
-    opacity: 0;
-    bottom: -1400px; }
-    #Book4 .page4 p {
-      top: 40px;
-      left: 30px; }
-  #Book4 .page4second {
-    transform: scaleX(-1) scaleY(1);
-    opacity: 0;
-    height: 710px;
-    bottom: -1400px; }
+    bottom: -142px; }
+  #Book4 .page3 p {
+    top: 40px;
+    left: 30px; }
+  #Book4 .page4 p {
+    top: 40px;
+    left: 30px; }
   #Book4 .page5 p {
     color: #fff;
     top: 100px;
@@ -282,17 +275,6 @@ table {
   #Book4 .page6 p {
     top: 120px;
     left: 120px; }
-  #Book4 .page5,
-  #Book4 .page6 {
-    transform: scale(1);
-    opacity: 0;
-    bottom: -1400px; }
-  #Book4 .page5second,
-  #Book4 .page6second {
-    transform: scaleX(-1) scaleY(1);
-    opacity: 0;
-    height: 710px;
-    bottom: -1400px; }
 
 #Landing {
   background-color: #76323F;
